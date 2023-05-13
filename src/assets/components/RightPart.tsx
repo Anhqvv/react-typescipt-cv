@@ -1,4 +1,4 @@
-import HomeCV from './content/homecv'
+import HomeCV from "components/content/homecv"
 
 const RightPart = () => {
   return (
