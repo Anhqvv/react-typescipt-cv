@@ -1041,16 +1041,20 @@ img.svg {
   }
 }
 .arlo_tm_skills_wrap {
-  width: 100%;
-  height: auto;
-  clear: both;
-  float: left;
+  // height: auto;
+  // clear: both;
+  // float: left;
+  display: flex;
+  justify-content: space-between;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   background-color: $background-color_5;
-  padding: 90px 0px;
+
+  &:last-child {
+  padding-top: 50px;
   margin-bottom: 100px;
+  }
   .inner_wrap {
     width: 100%;
     height: auto;

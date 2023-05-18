@@ -1,5 +1,5 @@
 import myCV from 'assets/my-cv.pdf'
-
+import man from 'assets/img/about/man.jpg'
 const About = () => {
   return (
     <div className='arlo_tm_section relative' id='about'>
@@ -18,7 +18,7 @@ const About = () => {
                 >
                   <div className='image layer' data-depth='0.1'>
                     <img src='img/about/550x640.jpg' alt='550x640' />
-                    <div className='inner' data-img-url='img/about/1.jpg'></div>
+                    <div className='inner' data-img-url={man}></div>
                   </div>
                   <div className='border layer' data-depth='0.2'>
                     <img src='img/about/550x640.jpg' alt='550x640' />
@@ -36,8 +36,7 @@ const About = () => {
                 <div className='definition'>
                   <p>
                     Xin Chào! Tôi tên là <strong>Võ Văn Quốc Anh</strong>. Hiện
-                    tại tôi đang học để trở thành một Web Developer, and I'm
-                    very passionate and dedicated to my work. Tôi đã có kỹ năng
+                    tại tôi đang học để trở thành một Web Developer. Tôi đã có kỹ năng
                     và kiến thức cần thiết để làm một số dự án về Reactjs. Tôi
                     thích thiết kế các sản phẩm wed. Và mong muốn có một trường
                     để được cái thiện bản thân và tôi đã tìm thấy quý công ty hi
