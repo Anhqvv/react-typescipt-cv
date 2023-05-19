@@ -1,4 +1,7 @@
-import desktopLogo  from 'assets/img/logo/desktop-logo1.png'
+import desktopLogo from 'assets/img/logo/desktop-logo1.png'
+
+import { AiFillLinkedin } from 'react-icons/ai'
+import { BsFacebook } from 'react-icons/bs'
 const LeftPart = () => {
   return (
     <div className='arlo_tm_leftpart_wrap'>
@@ -20,10 +23,10 @@ const LeftPart = () => {
               <a href='#skill'>Skill</a>
             </li>
             <li>
-              <a href='#services'>Projects</a>
+              <a href='#projects'>Projects</a>
             </li>
             <li>
-              <a href='#portfolio'>Portfolio</a>
+              <a href='#contact'>Contact</a>
             </li>
           </ul>
         </div>
@@ -32,27 +35,12 @@ const LeftPart = () => {
             <ul>
               <li>
                 <a href='#'>
-                  <i className='xcon-facebook'></i>
+                  <BsFacebook size={30}/>
                 </a>
               </li>
               <li>
                 <a href='#'>
-                  <i className='xcon-twitter'></i>
-                </a>
-              </li>
-              <li>
-                <a href='#'>
-                  <i className='xcon-linkedin'></i>
-                </a>
-              </li>
-              <li>
-                <a href='#'>
-                  <i className='xcon-instagram'></i>
-                </a>
-              </li>
-              <li>
-                <a href='#'>
-                  <i className='xcon-behance'></i>
+                  <AiFillLinkedin size={30} />
                 </a>
               </li>
             </ul>
