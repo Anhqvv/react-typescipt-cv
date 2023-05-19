@@ -1,6 +1,14 @@
 import { TypeAnimation } from 'react-type-animation'
 
 const HomeCV = () => {
+  const handleScrollToAbout = (e:any) => {
+    e.preventDefault();
+    const section = document.querySelector('#about')
+    if (section) {
+      let a = section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      console.log('section', a)
+    }
+  }
   return (
     <div className='arlo_tm_section' id='home'>
       <div className='arlo_tm_hero_header_wrap'>
@@ -41,7 +49,7 @@ const HomeCV = () => {
             </div>
           </div>
           <div className='arlo_tm_arrow_wrap bounce anchor'>
-            <a href='#about'>
+            <a href='#' onClick={(e:any) => handleScrollToAbout(e)} >
               <i className='xcon-angle-double-down'></i>
             </a>
           </div>

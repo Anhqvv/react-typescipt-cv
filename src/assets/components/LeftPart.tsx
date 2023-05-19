@@ -2,9 +2,18 @@ import desktopLogo from 'assets/img/logo/desktop-logo1.png'
 
 import { AiFillLinkedin } from 'react-icons/ai'
 import { BsFacebook } from 'react-icons/bs'
-const LeftPart = () => {
+
+interface IProps {
+  hideLeftPart: boolean
+  setHideLeftPart: (value: boolean) => void
+}
+const LeftPart = (props: IProps) => {
+  const { hideLeftPart, setHideLeftPart } = props
+  const handleHideLeftPart = () => {
+    setHideLeftPart(!hideLeftPart)
+  }
   return (
-    <div className='arlo_tm_leftpart_wrap'>
+    <div className={hideLeftPart ? 'arlo_tm_leftpart_wrap opened' : 'arlo_tm_leftpart_wrap'}>
       <div className='leftpart_inner'>
         <div className='logo_wrap'>
           <a href='#'>
@@ -35,7 +44,7 @@ const LeftPart = () => {
             <ul>
               <li>
                 <a href='#'>
-                  <BsFacebook size={30}/>
+                  <BsFacebook size={30} />
                 </a>
               </li>
               <li>
@@ -46,8 +55,14 @@ const LeftPart = () => {
             </ul>
           </div>
         </div>
-        <a className='arlo_tm_resize' href='#'>
-          <i className='xcon-angle-left'></i>
+        <a
+          className={hideLeftPart ? 'arlo_tm_resize opened' : 'arlo_tm_resize  '}
+          href='#'
+        >
+          <i
+            className={ hideLeftPart? 'xcon-angle-right': 'xcon-angle-left'}
+            onClick={() => handleHideLeftPart()}
+          ></i>
         </a>
       </div>
     </div>

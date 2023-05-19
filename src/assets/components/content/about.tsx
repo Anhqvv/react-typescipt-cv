@@ -2,7 +2,7 @@ import myCV from 'assets/my-cv.pdf'
 import man from 'assets/img/about/man.jpg'
 const About = () => {
   return (
-    <div className='arlo_tm_section relative' id='about'>
+    <div className='arlo_tm_section relative' id='about' style={{paddingTop: 80}}>
       <div className='arlo_tm_about_wrapper_all'>
         <div className='container'>
           <div className='arlo_tm_title_holder'>
@@ -18,7 +18,9 @@ const About = () => {
                 >
                   <div className='image layer' data-depth='0.1'>
                     <img src='img/about/550x640.jpg' alt='550x640' />
-                    <div className='inner' data-img-url={man}></div>
+                    <div className='inner'  style={{backgroundImage: `url(${man})`}}>
+
+                    </div>
                   </div>
                   <div className='border layer' data-depth='0.2'>
                     <img src='img/about/550x640.jpg' alt='550x640' />
