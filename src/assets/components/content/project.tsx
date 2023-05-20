@@ -68,9 +68,6 @@ const Project = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [dataModal, setDataModal] = useState<IProject | null>(null)
 
-  const showModal = () => {
-    setIsModalOpen(true)
-  }
 
   const handleCloseModal = () => {
     setIsModalOpen(false)
@@ -78,7 +75,7 @@ const Project = () => {
   }
 
   return (
-    <div className='arlo_tm_section' id='projects'>
+    <div className='arlo_tm_section' id='projects' style={{paddingTop:50}}>
       <Modal
         title={dataModal && dataModal.title ? `Prpject-${dataModal.title}` : ''}
         open={isModalOpen}

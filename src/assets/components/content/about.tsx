@@ -1,8 +1,28 @@
 import myCV from 'assets/my-cv.pdf'
 import man from 'assets/img/about/man.jpg'
+import { useEffect, useRef } from 'react'
+import Parallax from 'parallax-js'
 const About = () => {
+  const sceneEl = useRef(null)
+
+  useEffect(() => {
+    if (sceneEl && sceneEl.current) {
+      const parallaxInstance = new Parallax(sceneEl.current, {
+        relativeInput: true,
+        hoverOnly: true
+      })
+
+      parallaxInstance.enable()
+
+      return () => parallaxInstance.disable()
+    }
+  }, [])
   return (
-    <div className='arlo_tm_section relative' id='about' style={{paddingTop: 80}}>
+    <div
+      className='arlo_tm_section relative'
+      id='about'
+      style={{ paddingTop: 80 }}
+    >
       <div className='arlo_tm_about_wrapper_all'>
         <div className='container'>
           <div className='arlo_tm_title_holder'>
@@ -15,14 +35,16 @@ const About = () => {
                 <div
                   className='about_image_wrap parallax'
                   data-relative-input='true'
+                  ref={sceneEl}
                 >
-                  <div className='image layer' data-depth='0.1'>
+                  <div className='image layer' data-depth='0.2'>
                     <img src='img/about/550x640.jpg' alt='550x640' />
-                    <div className='inner'  style={{backgroundImage: `url(${man})`}}>
-
-                    </div>
+                    <div
+                      className='inner'
+                      style={{ backgroundImage: `url(${man})` }}
+                    ></div>
                   </div>
-                  <div className='border layer' data-depth='0.2'>
+                  <div className='border layer' data-depth='0.3'>
                     <img src='img/about/550x640.jpg' alt='550x640' />
                     <div className='inner'></div>
                   </div>
@@ -38,12 +60,12 @@ const About = () => {
                 <div className='definition'>
                   <p>
                     Xin Chào! Tôi tên là <strong>Võ Văn Quốc Anh</strong>. Hiện
-                    tại tôi đang học để trở thành một Web Developer. Tôi đã có kỹ năng
-                    và kiến thức cần thiết để làm một số dự án về Reactjs. Tôi
-                    thích thiết kế các sản phẩm wed. Và mong muốn có một trường
-                    để được cái thiện bản thân và tôi đã tìm thấy quý công ty hi
-                    vòng chúng ta có thế hợp tác để mang lại thật nhiều lợi ích
-                    cho công ty.
+                    tại tôi đang học để trở thành một Web Developer. Tôi đã có
+                    kỹ năng và kiến thức cần thiết để làm một số dự án về
+                    Reactjs. Tôi thích thiết kế các sản phẩm wed. Và mong muốn
+                    có một trường để được cái thiện bản thân và tôi đã tìm thấy
+                    quý công ty hi vòng chúng ta có thế hợp tác để mang lại thật
+                    nhiều lợi ích cho công ty.
                   </p>
                 </div>
                 <div className='about_short_contact_wrap'>

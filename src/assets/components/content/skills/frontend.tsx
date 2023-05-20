@@ -2,7 +2,7 @@ import ProgressBar from '@ramonak/react-progress-bar'
 const FrontEnd = () => {
   return (
     <div className='arlo_tm_skills_wrap'>
-      <div className='container'>
+      <div className='container' style={{ paddingTop: 30 }}>
         <div className='inner_wrap'>
           <div className='leftbox'>
             <div className='arlo_tm_mini_title_holder'>

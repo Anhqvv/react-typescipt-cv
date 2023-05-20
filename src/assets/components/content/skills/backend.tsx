@@ -2,19 +2,17 @@ import ProgressBar from '@ramonak/react-progress-bar'
 const BackEnd = () => {
   return (
     <div className='arlo_tm_skills_wrap'>
-      <div className='container'>
+      <div className='container' >
         <div className='inner_wrap'>
           <div className='leftbox'>
             <div className='arlo_tm_mini_title_holder'>
               <h4>Back-end</h4>
             </div>
-                      <ul>
-                          <li>NodeJs/ExpressJs</li>
-                          <li>Library/Framework: NestJs</li>
-                          <li>Database: MySQL</li>
-        </ul>
-
-           
+            <ul>
+              <li>NodeJs/ExpressJs</li>
+              <li>Library/Framework: NestJs</li>
+              <li>Database: MySQL</li>
+            </ul>
           </div>
           <div className='rightbox'>
             <div className='progress_bar_wrap_total'>
