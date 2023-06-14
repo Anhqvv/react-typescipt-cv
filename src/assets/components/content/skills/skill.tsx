@@ -3,7 +3,7 @@ import FrontEnd from './frontend'
 
 const Skill = () => {
   return (
-    <div className='arlo_tm_section ' id='skill' style={{paddingTop:50}} >
+    <div className='arlo_tm_section ' id='skills' style={{paddingTop:50}} >
       <div className='container'>
         <div className='arlo_tm_title_holder' >
           <h3>Skills</h3>

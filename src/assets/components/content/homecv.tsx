@@ -1,4 +1,5 @@
 import { TypeAnimation } from 'react-type-animation'
+import avatar from 'assets/img/hero/qa.jpg'
 
 const HomeCV = () => {
   const handleScrollToAbout = (e:any) => {
@@ -6,7 +7,6 @@ const HomeCV = () => {
     const section = document.querySelector('#about')
     if (section) {
       let a = section.scrollIntoView({ behavior: 'smooth', block: 'start' })
-      console.log('section', a)
     }
   }
   return (
@@ -20,7 +20,7 @@ const HomeCV = () => {
           <div className='content hero'>
             <div className='inner_content'>
               <div className='image_wrap'>
-                <img src='img/hero/qa.jpg' alt='hero' />
+                <img src={avatar } alt='hero' />
               </div>
               <div className='name_holder'>
                 <h3>

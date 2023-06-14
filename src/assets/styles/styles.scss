@@ -403,6 +403,13 @@ img.svg {
             &:before {
               width: 35px;
             }
+          
+          }
+          &.active {
+            color: $color_3;
+            &:before {
+              width: 35px;
+            }
           }
         }
       }
